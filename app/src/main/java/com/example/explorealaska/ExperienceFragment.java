@@ -9,17 +9,22 @@ import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class ExperienceFragment extends Fragment {
+    final List<Experience> experienceList = new ArrayList<>();
+
     /**
      * Called to have the fragment instantiate its user interface view.
      * This is optional, and non-graphical fragments can return null. This will be called between
      * {@link #onCreate(Bundle)} and {@link #onActivityCreated(Bundle)}.
-     * <p>A default View can be returned by calling {@link #Fragment(int)} in your
+     * <p>A default View can be returned by calling #Fragment(int) in your
      * constructor. Otherwise, this method returns null.
      *
      * <p>It is recommended to <strong>only</strong> inflate the layout in this method and move
@@ -40,20 +45,28 @@ public class ExperienceFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.item_list, container, false);
+        View rootView = inflater.inflate(R.layout.experience_list, container, false);
+        RecyclerView rvExperienceList = rootView.findViewById(R.id.experience_list);
 
         // Create a list of experiences
-        final List<Item> experiences = new ArrayList<>();
-        experiences.add(new Item(R.drawable.aurora, Item.NO_CAPTION_PROVIDED));
-        experiences.add(new Item(R.drawable.hot_spring, Item.NO_CAPTION_PROVIDED));
-        experiences.add(new Item(R.drawable.seafood, Item.NO_CAPTION_PROVIDED));
-        experiences.add(new Item(R.drawable.roadtrip, Item.NO_CAPTION_PROVIDED));
-        experiences.add(new Item(R.drawable.glacier, Item.NO_CAPTION_PROVIDED));
+        experienceList.add(new Experience(R.drawable.aurora));
+        experienceList.add(new Experience(R.drawable.hot_spring));
+        experienceList.add(new Experience(R.drawable.seafood));
+        experienceList.add(new Experience(R.drawable.roadtrip));
+        experienceList.add(new Experience(R.drawable.glacier));
+        experienceList.add(new Experience(R.drawable.glacier));
+        experienceList.add(new Experience(R.drawable.glacier));
+        experienceList.add(new Experience(R.drawable.glacier));
+        experienceList.add(new Experience(R.drawable.glacier));
+        // TODO PLACEHOLDER
 
-        // Set up list view and adapter
-        ItemAdapter itemAdapter = new ItemAdapter(Objects.requireNonNull(this.getActivity()), experiences);
-        ListView listView = (ListView) rootView.findViewById(R.id.item_list);
-        listView.setAdapter(itemAdapter);
+        // Set up adapter
+        ExperienceAdapter adapter = new ExperienceAdapter(experienceList);
+        rvExperienceList.setAdapter(adapter);
+
+        rvExperienceList.setLayoutManager(new GridLayoutManager(this.getContext(), 3,
+            GridLayoutManager.HORIZONTAL,
+                false));
 
         return rootView;
     }

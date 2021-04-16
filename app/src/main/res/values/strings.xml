@@ -3,4 +3,5 @@
     <string name="category_park">EXPLORE BY NATIONAL PARK</string>
     <string name="category_experience">EXPLORE BY EXPERIENCE</string>
     <string name="category_wildlife">EXPLORE BY WILDLIFE</string>
+    <string name="wildlife_image">A wildlife image</string>
 </resources>

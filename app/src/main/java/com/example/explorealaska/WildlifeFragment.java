@@ -11,17 +11,19 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class WildlifeFragment extends Fragment {
+    final List<Wildlife> wildlifeList = new ArrayList<>();
     /**
      * Called to have the fragment instantiate its user interface view.
      * This is optional, and non-graphical fragments can return null. This will be called between
      * {@link #onCreate(Bundle)} and {@link #onActivityCreated(Bundle)}.
-     * <p>A default View can be returned by calling {@link #Fragment(int)} in your
+     * <p>A default View can be returned by calling #Fragment(int) in your
      * constructor. Otherwise, this method returns null.
      *
      * <p>It is recommended to <strong>only</strong> inflate the layout in this method and move
@@ -42,29 +44,23 @@ public class WildlifeFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.item_list, container, false);
+        View rootView = inflater.inflate(R.layout.wildlife_list, container, false);
 
-        // Create a list of items
-        final List<Item> items = new ArrayList<>();
-        items.add(new Item(R.drawable.caribou, Item.NO_CAPTION_PROVIDED));
-        items.add(new Item(R.drawable.grizzly, Item.NO_CAPTION_PROVIDED));
-        items.add(new Item(R.drawable.dall_sheep, Item.NO_CAPTION_PROVIDED));
-        items.add(new Item(R.drawable.polar_bear, Item.NO_CAPTION_PROVIDED));
-        items.add(new Item(R.drawable.walrus, Item.NO_CAPTION_PROVIDED));
+        RecyclerView rvWildlifeList = rootView.findViewById(R.id.wildlife_list);
 
-        // Set up list view and adapter
-        ItemAdapter itemAdapter = new ItemAdapter(Objects.requireNonNull(this.getActivity()), items);
-        ListView listView = rootView.findViewById(R.id.item_list);
-        listView.setAdapter(itemAdapter);
+        // Initialize wildlife list
+        wildlifeList.add(new Wildlife(R.drawable.caribou));
+        wildlifeList.add(new Wildlife(R.drawable.grizzly));
+        wildlifeList.add(new Wildlife(R.drawable.dall_sheep));
+        wildlifeList.add(new Wildlife(R.drawable.polar_bear));
+        wildlifeList.add(new Wildlife(R.drawable.walrus));
 
-        listView.setOnItemClickListener(
-            (AdapterView<?> parent, View view, int position, long id) -> {
-                // TODO SHOW DETAIL
-                listView.getItemAtPosition(position);
-                Toast.makeText(this.getActivity(), "You clicked on position " + position,
-                    Toast.LENGTH_SHORT).show();
-            }
-        );
+        // Set up adapter
+        WildlifeAdapter adapter = new WildlifeAdapter(wildlifeList);
+        rvWildlifeList.setAdapter(adapter);
+
+        rvWildlifeList.setLayoutManager(new LinearLayoutManager(this.getContext(),
+            LinearLayoutManager.HORIZONTAL, false));
 
         return rootView;
     }
