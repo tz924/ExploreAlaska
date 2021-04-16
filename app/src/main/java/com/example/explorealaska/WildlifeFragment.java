@@ -4,10 +4,17 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 public class WildlifeFragment extends Fragment {
     /**
@@ -35,6 +42,30 @@ public class WildlifeFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
+        View rootView = inflater.inflate(R.layout.item_list, container, false);
+
+        // Create a list of items
+        final List<Item> items = new ArrayList<>();
+        items.add(new Item(R.drawable.caribou, Item.NO_CAPTION_PROVIDED));
+        items.add(new Item(R.drawable.grizzly, Item.NO_CAPTION_PROVIDED));
+        items.add(new Item(R.drawable.dall_sheep, Item.NO_CAPTION_PROVIDED));
+        items.add(new Item(R.drawable.polar_bear, Item.NO_CAPTION_PROVIDED));
+        items.add(new Item(R.drawable.walrus, Item.NO_CAPTION_PROVIDED));
+
+        // Set up list view and adapter
+        ItemAdapter itemAdapter = new ItemAdapter(Objects.requireNonNull(this.getActivity()), items);
+        ListView listView = rootView.findViewById(R.id.item_list);
+        listView.setAdapter(itemAdapter);
+
+        listView.setOnItemClickListener(
+            (AdapterView<?> parent, View view, int position, long id) -> {
+                // TODO SHOW DETAIL
+                listView.getItemAtPosition(position);
+                Toast.makeText(this.getActivity(), "You clicked on position " + position,
+                    Toast.LENGTH_SHORT).show();
+            }
+        );
+
+        return rootView;
     }
 }

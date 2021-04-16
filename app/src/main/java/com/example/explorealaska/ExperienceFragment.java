@@ -4,10 +4,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 public class ExperienceFragment extends Fragment {
     /**
@@ -35,6 +40,21 @@ public class ExperienceFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
+        View rootView = inflater.inflate(R.layout.item_list, container, false);
+
+        // Create a list of experiences
+        final List<Item> experiences = new ArrayList<>();
+        experiences.add(new Item(R.drawable.aurora, Item.NO_CAPTION_PROVIDED));
+        experiences.add(new Item(R.drawable.hot_spring, Item.NO_CAPTION_PROVIDED));
+        experiences.add(new Item(R.drawable.seafood, Item.NO_CAPTION_PROVIDED));
+        experiences.add(new Item(R.drawable.roadtrip, Item.NO_CAPTION_PROVIDED));
+        experiences.add(new Item(R.drawable.glacier, Item.NO_CAPTION_PROVIDED));
+
+        // Set up list view and adapter
+        ItemAdapter itemAdapter = new ItemAdapter(Objects.requireNonNull(this.getActivity()), experiences);
+        ListView listView = (ListView) rootView.findViewById(R.id.item_list);
+        listView.setAdapter(itemAdapter);
+
+        return rootView;
     }
 }

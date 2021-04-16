@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ParkFragment extends Fragment {
     /**
@@ -37,11 +38,10 @@ public class ParkFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.icon_list, container, false);
+        View rootView = inflater.inflate(R.layout.item_list, container, false);
 
-//        final List<Icon> icons = new ArrayList<~>();
+        final List<Item> items = new ArrayList<>();
 
-
-        return super.onCreateView(inflater, container, savedInstanceState);
+        return rootView;
     }
 }
