@@ -1,6 +1,7 @@
 package com.example.explorealaska;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,6 +40,10 @@ public class WildlifeAdapter extends RecyclerView.Adapter<WildlifeAdapter.ViewHo
             if (position != RecyclerView.NO_POSITION) {
                 // TODO
                 Wildlife wildlife = mWildlifeList.get(position);
+
+                Intent intent = new Intent(mContext, WildlifeActivity.class);
+                mContext.startActivity(intent);
+                intent.putExtra("IMAGE", wildlife.getImageResourceId());
                 Toast.makeText(mContext, "Position " + position, Toast.LENGTH_SHORT).show();
             }
         }

@@ -3,7 +3,7 @@
     <!-- TODO CHANGE THIS -->
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorPrimary">#33F5F5F5</item>
         <item name="colorPrimaryDark">@color/primary_dark_color</item>
         <item name="actionBarStyle">@style/ExploreAlaskaAppBarStyle</item>
         <item name="android:windowContentOverlay">@null</item>
@@ -27,4 +27,16 @@
     <style name="CategoryTabTextAppearance" parent="TextAppearance.Design.Tab">
         <item name="android:textColor">#A8A19E</item>
     </style>
+
+    <style name="Title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowDy">0dp</item>
+        <item name="android:shadowDx">4dp</item>
+        <item name="android:shadowRadius">4dp</item>
+        <item name="android:shadowColor">@color/black</item>
+        <item name="android:fontFamily">Cardo</item>
+    </style>
+
 </resources>
