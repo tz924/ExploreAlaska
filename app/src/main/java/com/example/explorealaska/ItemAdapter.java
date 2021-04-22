@@ -18,36 +18,28 @@ import java.util.List;
  */
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
 
-  private final List<Item> mItems;
+  private final List<Item> items;
 
   //    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
   public class ViewHolder extends RecyclerView.ViewHolder {
 
-    public ImageView mItemImage;
-    public TextView mItemCaption;
-    private final Context mContext;
+    public ImageView itemImage;
+    public TextView itemCaption;
+    private final Context context;
 
     public ViewHolder(Context context, @NonNull View itemView) {
       super(itemView);
-      this.mItemImage = itemView.findViewById(R.id.item_image_ins);
-      this.mItemCaption = itemView.findViewById(R.id.item_caption);
+      this.itemImage = itemView.findViewById(R.id.item_image_ins);
+      this.itemCaption = itemView.findViewById(R.id.item_caption);
 
       // On click support
-      this.mContext = context;
-//            itemView.setOnClickListener(this);
+      this.context = context;
     }
-
-//        @Override
-//        public void onClick(View view) {
-//            int position = getAdapterPosition();
-
-//            }
-//        }
   }
 
 
   public ItemAdapter(List<Item> items) {
-    mItems = items;
+    this.items = items;
   }
 
   /**
@@ -70,13 +62,13 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
    */
   @Override
   public void onBindViewHolder(@NonNull ItemAdapter.ViewHolder holder, int position) {
-    Item item = mItems.get(position);
+    Item item = items.get(position);
 
     // Set up item card
-    ImageView itemImage = holder.mItemImage;
+    ImageView itemImage = holder.itemImage;
     itemImage.setImageResource(item.getImageResourceId());
 
-    TextView itemCaption = holder.mItemCaption;
+    TextView itemCaption = holder.itemCaption;
     itemCaption.setText(item.getCaption());
   }
 
@@ -87,7 +79,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
    */
   @Override
   public int getItemCount() {
-    return mItems.size();
+    return items.size();
   }
 
   /**
