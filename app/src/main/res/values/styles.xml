@@ -3,15 +3,14 @@
     <!-- TODO CHANGE THIS -->
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">#33F5F5F5</item>
+        <item name="colorPrimary">#F5F5F5</item>
         <item name="colorPrimaryDark">@color/primary_dark_color</item>
         <item name="actionBarStyle">@style/ExploreAlaskaAppBarStyle</item>
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
     <!-- App bar style -->
-    <style name="ExploreAlaskaAppBarStyle"
-        parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+    <style name="ExploreAlaskaAppBarStyle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
         <!-- Remove the shadow below the app bar -->
         <item name="elevation">0dp</item>
     </style>
@@ -25,18 +24,64 @@
 
     <!-- Text appearance style for a category tab -->
     <style name="CategoryTabTextAppearance" parent="TextAppearance.Design.Tab">
-        <item name="android:textColor">#A8A19E</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">@font/cardo</item>
+        <item name="android:textSize">18sp</item>
     </style>
 
-    <style name="Title">
-        <item name="android:textSize">18sp</item>
+    <!-- Text appearance style for a category tab -->
+    <style name="ItemTextIns" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">@font/cardo</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:shadowDy">10</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowRadius">10</item>
+        <item name="android:ambientShadowAlpha">0.6</item>
+        <item name="android:spotShadowAlpha">0.6</item>
+        <item name="android:shadowColor">@color/white</item>
+    </style>
+
+    <style name="ItemText" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">@font/cardo_bold</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:shadowDy">10</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowRadius">10</item>
+        <item name="android:ambientShadowAlpha">0.6</item>
+        <item name="android:spotShadowAlpha">0.6</item>
+        <item name="android:shadowColor">@color/white</item>
+    </style>
+
+    <style name="TitleText" parent="TextAppearance.AppCompat">
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:shadowDy">0dp</item>
-        <item name="android:shadowDx">4dp</item>
-        <item name="android:shadowRadius">4dp</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowDx">4</item>
+        <item name="android:shadowRadius">4</item>
+        <item name="android:ambientShadowAlpha">0.15</item>
+        <item name="android:spotShadowAlpha">0.15</item>
         <item name="android:shadowColor">@color/black</item>
-        <item name="android:fontFamily">Cardo</item>
+        <item name="android:fontFamily">@font/cardo_bold</item>
+    </style>
+
+    <style name="Text" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowRadius">4</item>
+        <item name="android:ambientShadowAlpha">0.15</item>
+        <item name="android:spotShadowAlpha">0.15</item>
+        <item name="android:shadowColor">@color/black</item>
+        <item name="android:fontFamily">@font/josefin_sans</item>
     </style>
 
 </resources>

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="list_item_width">88dp</dimen>
-    <dimen name="list_item_height">88dp</dimen>
+    <dimen name="list_item_width">200dp</dimen>
+    <dimen name="list_item_height">200dp</dimen>
+    <dimen name="wildlife_item_width">150dp</dimen>
+    <dimen name="wildlife_item_height">150dp</dimen>
+    <dimen name="wildlife_image_width">150dp</dimen>
+    <dimen name="wildlife_image_height">150dp</dimen>
 </resources>

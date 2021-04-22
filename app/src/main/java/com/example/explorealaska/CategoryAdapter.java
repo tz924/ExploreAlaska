@@ -1,12 +1,15 @@
 package com.example.explorealaska;
 
+import android.app.Activity;
 import android.content.Context;
 
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 /**
  * {@link CategoryAdapter} is a {@link FragmentPagerAdapter} that can provide the layout for
@@ -14,7 +17,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
  */
 public class CategoryAdapter extends FragmentPagerAdapter {
 
-    private final Context mContext;
+    private final Context context;
 
     /**
      * Create a new {@link CategoryAdapter} object.
@@ -24,7 +27,7 @@ public class CategoryAdapter extends FragmentPagerAdapter {
      */
     public CategoryAdapter(Context context, FragmentManager supportFragmentManager) {
         super(supportFragmentManager);
-        mContext = context;
+        this.context = context;
     }
 
     /**
@@ -41,7 +44,7 @@ public class CategoryAdapter extends FragmentPagerAdapter {
             case 2:
                 return new ParkFragment();
             default:
-                return new ParkFragment();
+                return new InsPostFragment();
         }
     }
 
@@ -67,13 +70,13 @@ public class CategoryAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         switch (position) {
             case 0:
-                return mContext.getString(R.string.category_wildlife);
+                return context.getString(R.string.category_wildlife);
             case 1:
-                return mContext.getString(R.string.category_experience);
+                return context.getString(R.string.category_experience);
             case 2:
-                return mContext.getString(R.string.category_park);
+                return context.getString(R.string.category_park);
             default:
-                return mContext.getString(R.string.category_park);
+                return context.getString(R.string.category_ins_post);
         }
     }
 }

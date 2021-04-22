@@ -7,6 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="primary_blue">#9BC4D1</color>
+    <color name="primary_red">#C7AFBF</color>
 
     <!-- Primary color of the app (shown in the app bar) -->
     <color name="primary_color">#4A312A</color>

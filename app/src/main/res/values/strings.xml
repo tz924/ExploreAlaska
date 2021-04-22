@@ -1,7 +1,58 @@
 <resources>
-    <string name="app_name">ExploreAlaska</string>
-    <string name="category_park">EXPLORE BY NATIONAL PARK</string>
-    <string name="category_experience">EXPLORE BY EXPERIENCE</string>
-    <string name="category_wildlife">EXPLORE BY WILDLIFE</string>
-    <string name="wildlife_image">A wildlife image</string>
+  <string name="app_name">ExploreAlaska</string>
+  <string name="category_park">BY\nPARK</string>
+  <string name="category_experience">BY\nEXPERIENCE</string>
+  <string name="category_wildlife">BY\nWILDLIFE</string>
+  <string name="category_ins_post">BY\nINS POST</string>
+  <string name="wildlife_image">A wildlife image</string>
+  <string name="park_image">A park image</string>
+  <string name="place_image">An image of a place</string>
+
+  <!-- Wildlife Activity  -->
+  <string name="wildlife_intro_moose_title">Moose</string>
+  <string name="wildlife_intro_moose_text">Moose are relative newcomers to the Alaska Peninsula.
+        They have been observed since the early 1900s, but did not become abundant until the 1950s. Moose are most readily seen from the air in winter, when there is snow on the ground.</string>
+  <string name="wildlife_where_title">Where to See</string>
+  <string name="wildlife_where_text_1">along the Dalton Highway north of the Brooks Range</string>
+  <string name="wildlife_tips_text_1">1. Bull muskox are more aggressive during the fall breeding season from August through October. Avoid disturbing males in rut.</string>
+  <string name="wildlife_tips_title">Viewing Tips</string>
+  <string name="wildlife_where_text_3">in various other pockets of western Alaska</string>
+  <string name="wildlife_where_text_2">along the road system on the western Seward Peninsula</string>
+
+  <string name="caribou">Caribou</string>
+  <string name="grizzly_bear">Grizzly Bear</string>
+  <string name="dall_sheep">Dall Sheep</string>
+  <string name="polar_bear">Polar Bear</string>
+  <string name="moose">Moose</string>
+  <string name="lake_clark">Lake Clark NP</string>
+  <string name="kenai_fjord">Kenai Fjord NP</string>
+  <string name="wrangell_st_elias">Wrangell St. Elias NP</string>
+  <string name="denali">Denali NP</string>
+  <string name="glacier_bay">Glacier Bay NP</string>
+  <string name="hot_spring">Hot Spring</string>
+  <string name="bbq">BBQ</string>
+  <string name="aurora">Aurora</string>
+  <string name="seafood">Seafood</string>
+  <string name="road_trip">Road Trip</string>
+  <string name="wildlife_tips_text_2">2. View muskox from at least 150 feet, give groups a wide berth, and don\'t box them in with people or vehicles.</string>
+  <string name="wildlife_tips_text_3">3. No muskox attacks humans have been reported, but muskox are known to attack and kill dogs.</string>
+  <string name="back_button">Back button</string>
+  <string name="more_button">More button</string>
+  <string name="button_group">Button group</string>
+  <string name="park_map">Park map</string>
+  <string name="glacier">Glacier</string>
+  <string name="ins_cave">fun fact: Alaska is home to nearly 100,000 glaciers. Click the 🔗 in our bio to learn how to safely experience one of the world’s most beautiful natural wonders.</string>
+  <string name="ins_aurora">Your weekly aurora update has arrived. 💚 We’re nearing the end of prime northern lights viewing season in Alaska as our state is rapidly gaining daylight as we approach summer....</string>
+  <string name="ins_polar">Fun fact: polar bears are classified as a marine mammal and can swim for days at a time.</string>
+  <string name="ins_beer">Happy National Beer Day! 🍻 Save this post, so you know of at least a few nearby breweries the next time you’re in Alaska.</string>
+  <string name="ins_mountain">Springtime road trips are a must. 🚗 Check out the 🔗 in our bio for our favorite road trips to take throughout the state.</string>
+  <string name="experience_intro_glacier_text">Seeing icy glaciers is a quintessential Alaskan experience. Here are the most popular glaciers and the best ways to see them.</string>
+  <string name="experience_title">01                                                      Matanuska Glacier: Hike or Drive</string>
+  <string name="experience_text_1">Just a 2.5-hour drive from Anchorage, the Matanuska Glacier sits off the scenic but less-traveled Glenn Highway. More than four miles wide at its terminus, Matanuska is so massive that the water flowing out of its snout forms the roaring Matanuska River.</string>
+  <string name="experience_text_2">To see the glacier, you can just take one of the pullouts all along the highway —each with great photo ops—or you can drive near the glacier’s edge for up-close photos. One qualifier: Access to the glacier is on private land, so there’s a $30 fee.</string>
+  <string name="park_intro_text">This vast landscape does not contain any roads or trails. Visitors discover intact ecosystems where people have lived with the land for thousands of years. Wild rivers meander through glacier-carved valleys, caribou migrate along age-old trails, endless summer light fades into aurora-lit night skies of winter. It remains virtually unchanged except by the forces of nature.</string>
+  <string name="direction_location_title">Location:</string>
+  <string name="direction_location_text">Bettles, AK</string>
+  <string name="direction_address_title">Physical Address:</string>
+  <string name="direction_address_text">101 Dunkel St Fairbanks, AK 99701</string>
 </resources>

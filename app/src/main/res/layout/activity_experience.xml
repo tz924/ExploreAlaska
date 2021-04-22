@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@drawable/gradient_background"
+  tools:context=".WildlifeActivity">
+
+  <LinearLayout
+    android:id="@+id/details"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/header"
+    app:layout_constraintVertical_bias="0.0">
+
+    <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <TextView
+        android:id="@+id/intro_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:background="@drawable/border"
+        android:maxLines="5"
+        android:textAlignment="center"
+        android:textAppearance="@style/Text"
+        tools:text="Seeing icy glaciers is a quintessential Alaskan experience. Here are the most popular glaciers and the best ways to see them." />
+
+      <TextView
+        android:id="@+id/intro_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/primary_blue"
+        android:paddingHorizontal="16dp"
+        android:textAlignment="center"
+        android:textAppearance="@style/TitleText"
+        tools:text="Glacier" />
+
+    </FrameLayout>
+
+    <LinearLayout
+      android:id="@+id/experience"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/experience_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:textAlignment="center"
+        android:textAppearance="@style/TitleText"
+        tools:text="01                                                      Matanuska Glacier: Hike or Drive" />
+      <LinearLayout
+        android:id="@+id/experience_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:orientation="vertical">
+
+        <TextView
+          android:id="@+id/experience_text_1"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:padding="8dp"
+          android:maxLines="15"
+          android:textAppearance="@style/Text"
+          tools:text=" Just a 2.5-hour drive from Anchorage, the Matanuska Glacier sits off the scenic but less-traveled Glenn Highway. More than four miles wide at its terminus, Matanuska is so massive that the water flowing out of its snout forms the roaring Matanuska River. " />
+        <TextView
+          android:id="@+id/experience_text_2"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:padding="8dp"
+          android:maxLines="15"
+          android:textAppearance="@style/Text"
+          tools:text=" To see the glacier, you can just take one of the pullouts all along the highway —each with great photo ops—or you can drive near the glacier’s edge for up-close photos. One qualifier: Access to the glacier is on private land, so there’s a $30 fee." />
+        <ImageView
+          android:id="@+id/experience_image"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          tools:srcCompat="@drawable/glacier_image" />
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="150dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <ImageButton
+      android:id="@+id/back_button"
+      android:layout_width="40dp"
+      android:layout_height="wrap_content"
+      android:adjustViewBounds="true"
+      android:background="?android:attr/selectableItemBackground"
+      android:contentDescription="@string/back_button"
+      android:scaleType="fitCenter"
+      android:src="@drawable/back_button"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@+id/header_image"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:src="@drawable/back_button"
+      tools:srcCompat="@drawable/back_button" />
+
+    <ImageButton
+      android:id="@+id/more_button"
+      android:layout_width="40dp"
+      android:layout_height="wrap_content"
+      android:adjustViewBounds="true"
+      android:background="?android:attr/selectableItemBackground"
+      android:contentDescription="@string/more_button"
+      android:scaleType="fitCenter"
+      android:src="@drawable/more_button"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@+id/header_image"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:src="@drawable/more_button"
+      tools:srcCompat="@drawable/more_button" />
+
+    <ImageView
+      android:id="@+id/header_image"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:adjustViewBounds="true"
+      android:contentDescription="@string/wildlife_image"
+      android:scaleType="fitCenter"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintWidth_percent="0.3"
+      tools:srcCompat="@drawable/glacier" />
+    <ImageView
+      android:id="@+id/like_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@+id/more_button"
+      app:layout_constraintStart_toEndOf="@+id/header_image"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/like_button" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
